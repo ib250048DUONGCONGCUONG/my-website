@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Khám phá Kurashiki 倉敷市</title>
+<style>
+body { margin:0; padding:0; font-family:'Segoe UI',Arial,sans-serif; background:#f4f4f4; color:#333;}
+header { background: linear-gradient(90deg,#4CAF50,#2E7D32); color:white; padding:40px 20px; text-align:center;}
+header h1 { margin:0; font-size:2.5em;}
+header p { margin-top:10px; font-size:1.2em;}
+.lang-btn { position:fixed; top:20px; right:20px; background:#1a73e8; color:white; border:none; padding:10px 15px; border-radius:5px; cursor:pointer; font-size:1em;}
+section { max-width:1000px; margin:40px auto; padding:0 20px;}
+.images-grid { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.image-item { flex:1 1 280px; text-align:center; cursor:pointer; background:white; border-radius:8px; overflow:hidden; box-shadow:0 0 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.image-item:hover { transform: translateY(-5px);}
+.image-item img { width:100%; display:block; }
+.caption { margin-top:8px; font-weight:bold; }
+.intro { display:none; padding:10px; background:#eef; margin-top:5px; border-radius:5px; font-size:0.95em; text-align:left;}
+.text-vi { display:block; }
+.text-jp { display:none; color:#1a73e8; }
+footer { text-align:center; padding:20px; background:#333; color:white; margin-top:40px; border-top:1px solid #444;}
+</style>
+</head>
+<body>
+
+<button class="lang-btn" onclick="toggleLang()">日本語 / VI</button>
+
+<header>
+  <h1 class="text-vi">Khám phá Kurashiki</h1>
+  <h1 class="text-jp">倉敷市を探索</h1>
+  <p class="text-vi">Thành phố cổ kính và yên bình ở Okayama</p>
+  <p class="text-jp">岡山県の歴史ある静かな街</p>
+</header>
+
+<section>
+  <h2 class="text-vi">1. Tổng quan</h2>
+  <h2 class="text-jp">1. 概要</h2>
+  <div class="images-grid">
+    <div class="image-item" onclick="toggleIntro('intro1')">
+      <img src="c:\Users\tuoit\Downloads\phobikan.webp" alt="Phố Bikan">
+      <div class="caption"><span class="text-vi">Phố Bikan</span><span class="text-jp">美観地区</span></div>
+      <div id="intro1" class="intro">
+        <p class="text-vi">Phố Bikan nổi tiếng với những ngôi nhà trắng cổ kính, kênh rạch yên bình và không gian thơ mộng.</p>
+        <p class="text-jp">美観地区は白い古い建物と運河が続く静かな街です。</p>
+      </div>
+    </div>
+
+    <div class="image-item" onclick="toggleIntro('intro2')">
+      <img src="c:\Users\tuoit\Downloads\baotang.webp" alt="Bảo tàng Ohara">
+      <div class="caption"><span class="text-vi">Bảo tàng Ohara</span><span class="text-jp">大原美術館</span></div>
+      <div id="intro2" class="intro">
+        <p class="text-vi">Bảo tàng nghệ thuật nổi tiếng với các tác phẩm phương Tây và Nhật Bản, thu hút nhiều khách tham quan.</p>
+        <p class="text-jp">西洋および日本のアート作品で有名な美術館で、多くの観光客が訪れます。</p>
+      </div>
+    </div>
+
+    <div class="image-item" onclick="toggleIntro('intro3')">
+      <img src="c:\Users\tuoit\Downloads\quan.jpg" alt="Kurashiki Ivy Square">
+      <div class="caption"><span class="text-vi">Kurashiki Ivy Square</span><span class="text-jp">倉敷アイビースクエア</span></div>
+      <div id="intro3" class="intro">
+        <p class="text-vi">Khu phức hợp với cửa hàng, quán cà phê và kiến trúc lịch sử, nơi thư giãn và tham quan thú vị.</p>
+        <p class="text-jp">ショップ、カフェ、歴史的建物がある複合施設で、楽しい観光スポットです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="text-vi">2. Khu Bikan</h2>
+  <h2 class="text-jp">2. 美観地区</h2>
+  <div class="images-grid">
+    <div class="image-item" onclick="toggleIntro('intro4')">
+      <img src="c:\Users\tuoit\Downloads\kenh.jpg" alt="Kênh Bikan">
+      <div class="caption"><span class="text-vi">Kênh Bikan</span><span class="text-jp">美観地区の運河</span></div>
+      <div id="intro4" class="intro">
+        <p class="text-vi">Trải nghiệm thuyền dạo trên kênh, thưởng ngoạn cảnh đẹp và không khí truyền thống.</p>
+        <p class="text-jp">伝統的な舟で運河を巡り、美しい景色を楽しめます。</p>
+      </div>
+    </div>
+
+    <div class="image-item" onclick="toggleIntro('intro5')">
+      <img src="c:\Users\tuoit\Pictures\598661278_1186057139709941_7620276528604822083_n.jpg" alt="Đường phố Kurashiki">
+      <div class="caption"><span class="text-vi">Đường phố cổ</span><span class="text-jp">古い街並み</span></div>
+      <div id="intro5" class="intro">
+        <p class="text-vi">Đường phố yên bình, nhiều góc chụp ảnh đẹp, giữ nguyên kiến trúc truyền thống.</p>
+        <p class="text-jp">静かな通りで、写真スポットが多く、伝統的な建物が残っています。</p>
+      </div>
+    </div>
+
+    <div class="image-item" onclick="toggleIntro('intro6')">
+      <img src="c:\Users\tuoit\Downloads\ve dem.jpg" alt="Bikan đêm">
+      <div class="caption"><span class="text-vi">Bikan về đêm</span><span class="text-jp">美観地区の夜景</span></div>
+      <div id="intro6" class="intro">
+        <p class="text-vi">Bikan lung linh về đêm với ánh đèn vàng và không gian lãng mạn.</p>
+        <p class="text-jp">夜の美観地区は灯りが美しく、ロマンチックな雰囲気です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="text-vi">3. Ẩm thực & Địa điểm</h2>
+  <h2 class="text-jp">3. 食べ物 & 見どころ</h2>
+  <div class="images-grid">
+    <div class="image-item" onclick="toggleIntro('intro7')">
+      <img src="c:\Users\tuoit\Downloads\hải san.jpg" alt="Hải sản Kurashiki">
+      <div class="caption"><span class="text-vi">Hải sản tươi ngon</span><span class="text-jp">新鮮な海の幸</span></div>
+      <div id="intro7" class="intro">
+        <p class="text-vi">Hải sản tươi ngon đặc trưng của vùng biển Kurashiki, thưởng thức ngay tại chỗ.</p>
+        <p class="text-jp">倉敷の新鮮な海の幸をその場で楽しめます。</p>
+      </div>
+    </div>
+
+    <div class="image-item" onclick="toggleIntro('intro8')">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Pancake Nhật">
+      <div class="caption"><span class="text-vi">Pancake Nhật</span><span class="text-jp">日本風パンケーキ</span></div>
+      <div id="intro8" class="intro">
+        <p class="text-vi">Pancake phong cách Nhật Bản, mềm mại và trang trí đẹp mắt.</p>
+        <p class="text-jp">日本風パンケーキはふわふわで美しく盛り付けられています。</p>
+      </div>
+    </div>
+
+    <div class="image-item" onclick="toggleIntro('intro9')">
+      <img src="c:\Users\tuoit\Downloads\ly.jpg" alt="Quán cà phê Kurashiki">
+      <div class="caption"><span class="text-vi">Quán cà phê cổ kính</span><span class="text-jp">レトロなカフェ</span></div>
+      <div id="intro9" class="intro">
+        <p class="text-vi">Quán cà phê bên kênh, không gian ấm cúng, thích hợp thư giãn.</p>
+        <p class="text-jp">運河沿いのカフェで、落ち着いた空間でリラックスできます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 2026 Khám phá Kurashiki 倉敷市</footer>
+
+<script>
+function toggleLang(){
+  const vi=document.querySelectorAll('.text-vi');
+  const jp=document.querySelectorAll('.text-jp');
+  vi.forEach(el=>el.style.display=el.style.display==='none'?'block':'none');
+  jp.forEach(el=>el.style.display=el.style.display==='none'?'block':'none');
+}
+
+function toggleIntro(id){
+  const intro=document.getElementById(id);
+  if(intro.style.display==='block'){ intro.style.display='none'; }
+  else{ intro.style.display='block'; }
+}
+</script>
+
+</body>
+</html>
